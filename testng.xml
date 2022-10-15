@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="bank suite"  >
+    <listeners>
+        <listener class-name="util.ListenerManager"/>
+    </listeners>
+    <test verbose="2" name="bank test" parallel="methods" thread-count="2" >
+        <classes>
+            <class name="Banktests.BankTests">
+                <methods>
+                    <include name="testAddCustomerOpenAccountDeleteCustomer"/>
+                    <include name="testAddCustomerOpenAccountDepositAndWithdraw"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
